@@ -184,6 +184,7 @@ const TeacherDashboard = ({ user }: TeacherDashboardProps) => {
             classId={selectedClass}
             open={!!selectedClass}
             onOpenChange={(open) => !open && setSelectedClass(null)}
+            onClassDeleted={fetchClasses}
           />
         )}
       </main>
