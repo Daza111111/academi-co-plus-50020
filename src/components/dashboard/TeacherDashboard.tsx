@@ -104,10 +104,13 @@ const TeacherDashboard = ({ user }: TeacherDashboardProps) => {
             </div>
           </div>
           <div className="flex items-center gap-4">
-            <div className="text-right">
+            <button 
+              onClick={() => navigate("/profile")}
+              className="text-right hover:opacity-80 transition-opacity"
+            >
               <p className="text-sm font-medium">{profile?.full_name}</p>
               <p className="text-xs text-muted-foreground">{profile?.email}</p>
-            </div>
+            </button>
             <Button variant="outline" size="sm" onClick={handleSignOut}>
               <LogOut className="h-4 w-4 mr-2" />
               Salir
